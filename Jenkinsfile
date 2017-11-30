@@ -1,15 +1,23 @@
 pipeline {
     agent any
 
+    tools{
+        maven 'Maven 3.5.2'
+        jdk 'jdk8'
+    }
+
     stages {
-        stage('Build') {
+        stage('Initialize') {
             steps {
-                echo 'Building..'
+                sh '''
+                    echo "PATH = ${PATH}"
+                    echo "M2_HOME = ${M2_HOME}"
+                '''
             }
         }
-        stage('Test') {
+        stage('Build') {
             steps {
-                echo 'Testing..'
+                sh 'mvn install'
             }
         }
         stage('Deploy') {
