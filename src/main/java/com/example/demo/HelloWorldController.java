@@ -10,7 +10,7 @@ import java.util.concurrent.atomic.AtomicLong;
 @Controller
 public class HelloWorldController {
 
-    @RequestMapping("/hello-world")
+    @RequestMapping("/")
     public String greeting(@RequestParam(value="name", required=false, defaultValue="World") String name, Model model){
         model.addAttribute("name", name);
         return "greeting";
