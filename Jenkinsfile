@@ -20,14 +20,15 @@ pipeline {
                 sh 'mvn install'
             }
         }
-        stage('Docker'){
+        /*stage('Docker'){
             steps{
                 sh 'docker build . -t helloworld'
             }
-        }
+        }*/
         stage('Deploy') {
             steps {
                 echo 'Deploying....'
+                sh 'gcloud app deploy'
             }
         }
     }
