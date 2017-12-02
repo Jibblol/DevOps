@@ -20,6 +20,11 @@ pipeline {
                 sh 'mvn install'
             }
         }
+        stage('Docker'){
+            steps{
+                sh 'docker build . -t helloworld'
+            }
+        }
         stage('Deploy') {
             steps {
                 echo 'Deploying....'
