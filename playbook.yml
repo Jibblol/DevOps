@@ -5,7 +5,7 @@
 
   vars:
     machine_type: n1-standard-1 # default
-    image: ubuntu-1404-lts
+    image_family: ubuntu-1404-lts
     service_account_email: jenkins@devops-186919.iam.gserviceaccount.com
     credentials_file: /usr/share/jenkins/devops-0276f823ccec.json
     project_id: devops-186919
@@ -15,7 +15,7 @@
       gce:
           instance_names: dev
           machine_type: "{{ machine_type }}"
-          image: "{{ image }}"
+          image_family: "{{ image_family }}"
           service_account_email: "{{ service_account_email }}"
           credentials_file: "{{ credentials_file }}"
           project_id: "{{ project_id }}"
