@@ -22,9 +22,7 @@ pipeline {
         }
         stage('Ansible'){
             steps{
-                ansiblePlaybook('./playbook.yml'){
-                    ansibleName('ansible')
-                }
+                ansiblePlaybook playbook:'./playbook.yml'
             }
         }
         /*stage('Docker'){
