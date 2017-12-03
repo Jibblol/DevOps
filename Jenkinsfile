@@ -20,6 +20,13 @@ pipeline {
                 sh 'mvn install'
             }
         }
+        stage('Ansible'){
+            steps{
+                ansiblePlaybook('./playbook.yml'){
+                    ansibleName('ansible')
+                }
+            }
+        }
         /*stage('Docker'){
             steps{
                 sh 'docker build . -t helloworld'
