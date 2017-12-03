@@ -6,7 +6,7 @@
   vars:
     machine_type: n1-standard-1 # default
     image: ubuntu-1404-lts
-    service_account_email: jenkins@devops-186919.gserviceaccount.com
+    service_account_email: jenkins@devops-186919.iam.gserviceaccount.com
     credentials_file: /usr/share/jenkins/devops-0276f823ccec.json
     project_id: devops-186919
 
