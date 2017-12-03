@@ -30,10 +30,10 @@
       add_host: hostname={{ item.public_ip }} groupname=new_instances
       with_items: "{{ gce.instance_data }}"
 
-- name: Manage new instances
-  hosts: new_instances
-  connection: ssh
-  sudo: True
-  roles:
-    - base_configuration
-    - production_server
+#- name: Manage new instances
+ # hosts: new_instances
+  #connection: ssh
+  #sudo: True
+  #roles:
+   # - base_configuration
+    #- production_server
