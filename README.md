@@ -53,8 +53,8 @@ og så oppstart av imaget. Jeg har dessverre ikke kommet så langt på grunn av 
  - Jeg skulle gjerne ha fått til Ansible på en bedre måte. Helst vil jeg at Ansible skal laste ned docker-image fra Jenkins og rulle det ut på den nyoppstartede VMen.
  - Løsningen kunne gjerne hatt autoskalering i tilfelle det kommer mye trafikk.
  - Mangelfull varsling ved problemer/feil i jenkins-pipeline
- - Kjører pipeline på samtlige commits til GitHub. Burde heller kanskje brukt en release-mekanisme. Tilførsler til f.eks. readme vil trigge en full redeploy av applikasjonen.
- - Usikken med nåværende oppsett om applikasjonen får nedetid noe sted deployprosessen. I en produksjonsløsning ville man kanskje hatt en loadbalancer mellom flere instanser og bare tatt ned én om gangen, og skyve trafikken på de(n) som er oppe og går.
+ - Kjører pipeline på samtlige commits til GitHub. Det beste er om man utvikler applikasjonen i en separat branch slik at man kan rulle ut større oppdateringer hver gang, i stedet for små endringer i kode . Tilførsler til f.eks. readme vil trigge en full redeploy av applikasjonen; det vil ikke jeg kalle optimalt.
+ - Usikkert med nåværende oppsett om applikasjonen får nedetid noe sted deployprosessen. I en produksjonsløsning ville man kanskje hatt en loadbalancer mellom flere instanser og bare tatt ned én om gangen, og skyve trafikken på de(n) som er oppe og går.
 
 
 #  Flere kilder
