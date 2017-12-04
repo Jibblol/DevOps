@@ -26,6 +26,9 @@ $ gcloud app deploy
 ### GitHub-Webhook
 ![Image](images/Git_webhook.PNG)
 
+### Bygg-deploy prosess i Jenkins
+![Image](images/build-deploy.png)
+
 
 # Ansible
 
